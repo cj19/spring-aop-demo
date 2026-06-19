@@ -20,9 +20,12 @@ repositories {
 
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-webmvc'
+	implementation 'org.aspectj:aspectjweaver'
+	implementation 'io.projectreactor:reactor-core'
 	testImplementation 'org.springframework.boot:spring-boot-starter-webmvc-test'
+	testImplementation 'io.projectreactor:reactor-test'
+	testImplementation 'net.jqwik:jqwik:1.9.1'
 	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
-	implementation("org.springframework:spring-aop:7.0.8")
 }
 
 tasks.named('test') {
